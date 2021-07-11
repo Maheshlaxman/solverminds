@@ -20,17 +20,17 @@ export class LoginComponent implements OnInit {
 
   
  
-//   data:any;
-//   uname:any;
-//   usernameerror:any;
-//   psw:any;
-//   passwoerror:any;
-//  valueuser:string;
+  data:any;
+  uname:any;
+  usernameerror:any;
+  psw:any;
+  passwoerror:any;
+ valueuser:string;
 
-//   login(valueuser){
-//     var uservalue="admin@gmail.com";
-//     var passwovalue="admin@123"
-//     this.router.navigateByUrl('/home');
+  login(valueuser){
+    var uservalue="admin@gmail.com";
+    var passwovalue="admin@123"
+    this.router.navigateByUrl('/home');
     // if(this.uname==uservalue){
     //   if(this.psw==passwovalue){
     //     this.valueuser = 'logggggg'
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
     //   this.usernameerror="please enter valid username"
     //   console.log(this.usernameerror)
     // }
-  // }
+  }
   
   
 
