@@ -7,15 +7,13 @@ import { MainpagecomponentComponent } from './mainpagecomponent/mainpagecomponen
 
 const routes: Routes = [
   { path: '', 
-  redirectTo:'/login',
+  redirectTo:'/home',
   pathMatch:'full',
 },
 { path: 'login', component: LoginComponent,
 
 },
-{ path: 'mastercom', component: MainpagecomponentComponent,
 
-},
  
   { path: 'home', component: MainpageComponent,
   children:[
