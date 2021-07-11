@@ -1,0 +1,28 @@
+.d-flex{
+  padding-left: 800px;
+}
+.bg-light {
+  background-color: #82acd7!important;
+}
+.btn-outline-success {
+  color: #181f19;
+  background-color: transparent;
+  background-image: none;
+  border-color: #0c60b4!important;
+}
+.example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}

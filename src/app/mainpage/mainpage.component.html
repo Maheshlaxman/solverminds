@@ -1,0 +1,244 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" >welcome </a>
+        </li>
+      </ul>
+      <form style="padding-left: 1338px;">
+        <button class="btn btn-outline-primary" style="background-color: #82acd7!important;"><a href="#"
+            style="color: rgb(8, 8, 8);">logout</a></button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!-- <div  class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-3">
+      <div class="card-body">
+        <h6>click here for upload</h6>
+        <button type="button" class="btn btn-info" style="background-color: #82acd7!important;"
+          (click)="openmodal(uploadphotos)">add</button>
+      </div>
+    </div>
+    <div  style="text-align: center;">
+      <h6>Upload your first Photo</h6>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- <div  class="card mb-3"> -->
+  <!-- <div class="row">
+    <div class="col-md-12">
+      <div class="card-body">
+        <dx-data-grid [dataSource]="dataSource" [remoteOperations]="true" [height]="600" [showBorders]="true">
+          <dxo-filter-row [visible]="true"></dxo-filter-row>
+          <dxo-header-filter [visible]="true"></dxo-header-filter>
+          <dxo-group-panel [visible]="true"></dxo-group-panel>
+          <dxo-scrolling mode="virtual"></dxo-scrolling>
+          <dxo-editing mode="row" [allowAdding]="true" [allowUpdating]="true" [allowDeleting]="true">
+          </dxo-editing>
+          <dxo-grouping [autoExpandAll]="false"></dxo-grouping>
+          <dxo-master-detail [enabled]="true" template="detail"></dxo-master-detail>
+          <dxi-column dataField="id" caption="ID">
+            
+          </dxi-column>
+          <dxi-column dataField="name" dataType="string">
+              <dxi-validation-rule type="required" message="The OrderDate field is required."></dxi-validation-rule>
+          </dxi-column>
+          <dxi-column dataField="phone">
+              <dxo-header-filter groupInterval="100"></dxo-header-filter>
+              <dxi-validation-rule type="range" [min]="0" [max]="2000"
+                  message="The field Freight must be between 0 and 2000.">
+              </dxi-validation-rule>
+          </dxi-column>
+          <dxi-column dataField="website">
+              <dxi-validation-rule type="stringLength" max="15"
+                  message="The field ShipCountry must be a string with a maximum length of 15."></dxi-validation-rule>
+          </dxi-column> -->
+          
+        
+          <!-- <div *dxTemplate="let order of 'detail'">
+              <detail-grid [key]="order.key"></detail-grid>
+          </div> -->
+          <!-- <dxo-summary>
+              <dxi-total-item column="Freight" summaryType="sum">
+                  <dxo-value-format type="decimal" [precision]="2"></dxo-value-format>
+              </dxi-total-item>
+              <dxi-group-item column="Freight" summaryType="sum">
+                  <dxo-value-format type="decimal" [precision]="2"></dxo-value-format>
+              </dxi-group-item>
+              <dxi-group-item summaryType="count">
+              </dxi-group-item>
+          </dxo-summary>
+        </dx-data-grid>
+    </div>
+    
+  </div> 
+ </div>  -->
+ <div class="card">
+ <div class="row g-0">
+  <div class="col-md-10">
+    <div class="card-body">
+ <dx-data-grid 
+ id="gridContainer" 
+ [allowColumnReordering]="true"
+ [rowAlternationEnabled]="true"
+ [showBorders]="true"
+ [dataSource]="dataSource"
+ 
+ 
+ >
+ <dxo-header-filter 
+ [visible]="showHeaderFilter"></dxo-header-filter>
+<dxo-search-panel 
+ [visible]="true" 
+ [width]="240" 
+ placeholder="Search..."></dxo-search-panel>
+ <dxo-filter-row 
+ [visible]="showFilterRow" 
+ [applyFilter]="currentFilter"></dxo-filter-row>
+
+ <!-- <dxo-selection mode="single"></dxo-selection> -->
+
+ <dxi-column dataField="id" [width]="130" caption="ID"></dxi-column>
+ <dxi-column dataField="imagepath" cellTemplate="cellTemplate" caption="User"></dxi-column>
+ <dxi-column dataField="name" [width]="160" ></dxi-column>
+ <dxi-column dataField="phone"></dxi-column>
+ <dxi-column dataField="website"  caption="City"></dxi-column>
+ <dxi-column dataField="action" cellTemplate="cellTemplates" caption="Action"></dxi-column>
+ <div *dxTemplate="let cell of 'cellTemplates'">
+  <div style="color:black ; text-align: center;"  ><i class="fa fa-eye" style="font-size: 15px;    cursor: pointer;" aria-hidden="true"(click)="selectedfunctio(cell.data)"></i></div>
+</div>
+<div *dxTemplate="let cells of 'cellTemplate'">
+  <img src="{{cells}}" alt="" />
+  <!-- <img src={{cells}} alt="" class="img-rounded img-responsive" /> -->
+  
+</div>
+ <!-- <dxi-column dataField="SaleAmount"  alignment="right" format="currency"></dxi-column> -->
+
+ <!-- <dxo-summary>
+     <dxi-total-item
+         column="OrderNumber"
+         summaryType="count">
+     </dxi-total-item>
+     <dxi-total-item
+         column="OrderDate"
+         summaryType="min"
+         [customizeText]="customizeDate">
+     </dxi-total-item>
+     <dxi-total-item
+         column="SaleAmount"
+         summaryType="sum"
+         valueFormat="currency">
+     </dxi-total-item>
+ </dxo-summary> -->
+
+</dx-data-grid>
+    </div>
+    </div>
+ </div>
+</div>
+<!-- <div class="card">
+  <div class="row g-0">
+   <div class="col-md-10">
+<dx-data-grid id="gridContainer"
+    [dataSource]="dataSource"
+    [remoteOperations]="false"
+    [allowColumnReordering]="true"
+    [rowAlternationEnabled]="true"
+    [showBorders]="true"
+    (onContentReady)="contentReady($event)">
+​
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-pager
+        [showPageSizeSelector]="true"
+        [allowedPageSizes]="[10, 25, 50, 100]"
+    ></dxo-pager>
+    <dxo-search-panel
+        [visible]="true"
+        [highlightCaseSensitive]="true"
+    ></dxo-search-panel>
+    <dxo-group-panel
+        [visible]="true"
+    ></dxo-group-panel>
+    <dxo-grouping
+        [autoExpandAll]="false"
+    ></dxo-grouping>
+​
+<dxi-column dataField="id" [width]="130" caption="Invoice Number"></dxi-column>
+<dxi-column dataField="company.name" [width]="160" dataType="date"></dxi-column>
+<dxi-column dataField="phone"></dxi-column>
+<dxi-column dataField="website"  caption="City"></dxi-column>
+​
+   
+</dx-data-grid>
+​</div>
+</div>
+</div> -->
+<!-- <div *ngIf="lengthcheck" class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-3">
+      <div class="card-body">
+        <h6>click here for upload</h6>
+        <button type="button" class="btn btn-info" style="background-color: #82acd7!important;"
+          (click)="openmodal(uploadphotos)">add</button>
+      </div>
+    </div>
+    <div class="col-md-12" style="text-align: center;">
+      <div *ngFor="let data of storearray">
+        <div>
+          <h6 style="padding-right: 368px;display: inline;">Title: {{data.Title}}</h6>
+
+          <button type="button" class="btn btn-danger" style=" float:inline-end ;size:5px !important;"
+            (click)=deletefunc(data)>Delete</button>
+        </div>
+        <img src={{data.Image}} width="500" height="600">
+        <h6 style="padding-right: 418px;">About : {{data.Body}}</h6>
+        <div *ngIf="commlength">
+          <div *ngFor="let datavalue of data.comment">
+            <span>{{datavalue}}</span>
+          </div>
+        </div>
+        <div>
+          <h6 style="padding-right: 426px;">comments</h6>
+          <textarea type="text" style="width: 490px;height: 50px;padding-right: 433px;" maxlength="30"
+            [(ngModel)]="commentsvalue" onkeypress="return/[a-z]/i.test(event.key)"></textarea>
+          <button type="button" class="btn btn-info"
+            style="background-color: #82acd7!important; margin-top: 95px; float:inline-end ;size:5px"
+            (click)="comments()">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<ng-template #uploadphotos>
+  <div class="modal-header" style="background-color: #82acd7 ">
+    <h4 class="modal-title pull-left">Upload Photo</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <h6>Title</h6>
+    <textarea type="text" style="width: 601px;height: 100px;" maxlength="50" [(ngModel)]="title"
+      onkeypress="return/[a-z]/i.test(event.key)"></textarea>
+    <h6>Type Something about Picture</h6>
+    <textarea type="text" style="width: 601px;height: 100px;" maxlength="50" [(ngModel)]="body"
+      onkeypress="return/[a-z]/i.test(event.key)"></textarea>
+    <input type="file" name="files" id="fileInput" (change)="onselectfile($event)" accept="image/*">
+    <button type="button" class="btn btn-info" style="background-color: #82acd7!important; margin-top: 95px;"
+      [disabled]="fileInput.value==''" (click)="uploadfunction()">Post</button>
+  </div>
+</ng-template>
+<app-document [valueuser]=valueuser (countChanged)="countChangedHandler($event)"></app-document>
