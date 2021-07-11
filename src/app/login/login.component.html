@@ -15,10 +15,10 @@
           <input type="password" [(ngModel)]="psw" class="form-control" placeholder="">
         </div>
         <div class="form-check">
-          <label class="form-check-label">
+          <!-- <label class="form-check-label">
             <input type="checkbox" class="form-check-input">
             <small>Remember Me</small>
-          </label>
+          </label> -->
           <button (click)="login()"class="btn btn-login float-right">Submit</button>
         </div>
         <div *ngIf='usernameerror' class="error">
