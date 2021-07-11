@@ -30,23 +30,24 @@ export class LoginComponent implements OnInit {
   login(valueuser){
     var uservalue="admin@gmail.com";
     var passwovalue="admin@123"
-    if(this.uname==uservalue){
-      if(this.psw==passwovalue){
-        this.valueuser = 'logggggg'
-        console.log("loginsuccess")
-        this.router.navigateByUrl('/home');
-      }
-      else{
+    this.router.navigateByUrl('/home');
+    // if(this.uname==uservalue){
+    //   if(this.psw==passwovalue){
+    //     this.valueuser = 'logggggg'
+    //     console.log("loginsuccess")
+    //     this.router.navigateByUrl('/home');
+    //   }
+    //   else{
        
-        this.passwoerror="please enter valid password"
+    //     this.passwoerror="please enter valid password"
 
-      }
+    //   }
 
-    }
-    else{
-      this.usernameerror="please enter valid username"
-      console.log(this.usernameerror)
-    }
+    // }
+    // else{
+    //   this.usernameerror="please enter valid username"
+    //   console.log(this.usernameerror)
+    // }
   }
   
   
