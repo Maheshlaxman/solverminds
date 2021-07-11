@@ -8,29 +8,22 @@
 		<div class="col-md-4 login-sec">
 		    <h2 class="text-center">Login Now</h2>
   <div >
-    <label for="exampleInputEmail1" class="text-uppercase">Username</label>
+    <label  class="text-uppercase">Username</label>
     <input type="text" [(ngModel)]="uname"  placeholder="">
   </div>
   <div >
-    <label for="exampleInputPassword1" class="text-uppercase">Password</label>
+    <label  class="text-uppercase">Password</label>
     <input type="password" [(ngModel)]="psw" placeholder="">
   </div>
     <div style="margin-top:10px">
-    <!-- <label >
-      <input type="checkbox" >
-      <small>Remember Me</small>
-    </label> -->
     <button (click)="login()" >Submit</button>
   </div>
   <div *ngIf='usernameerror' class="error">
     <span>{{usernameerror}}</span>
-  
   </div>
   <div *ngIf='passwoerror' class="error">
-  
     <span>{{passwoerror}}</span>
   </div>
-
 <!-- <div class="copy-text">Created with <i class="fa fa-heart"></i> by Grafreez</div> -->
 		</div>
 		<div class="col-md-8 banner-sec">
