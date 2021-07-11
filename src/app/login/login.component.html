@@ -14,11 +14,8 @@
           <label for="exampleInputPassword1" class="text-uppercase">Password</label>
           <input type="password" [(ngModel)]="psw" class="form-control" placeholder="">
         </div>
-        <div class="form-check">
-          <!-- <label class="form-check-label">
-            <input type="checkbox" class="form-check-input">
-            <small>Remember Me</small>
-          </label> -->
+        <div >
+         
           <button (click)="login()"class="btn btn-login float-right">Submit</button>
         </div>
         <div *ngIf='usernameerror' class="error">
