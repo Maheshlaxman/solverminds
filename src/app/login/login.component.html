@@ -9,18 +9,18 @@
 		    <h2 class="text-center">Login Now</h2>
   <div >
     <label for="exampleInputEmail1" class="text-uppercase">Username</label>
-    <input type="text" [(ngModel)]="uname" class="form-control" placeholder="">
+    <input type="text" [(ngModel)]="uname"  placeholder="">
   </div>
   <div >
     <label for="exampleInputPassword1" class="text-uppercase">Password</label>
-    <input type="password" [(ngModel)]="psw" class="form-control" placeholder="">
+    <input type="password" [(ngModel)]="psw" placeholder="">
   </div>
     <div style="margin-top:10px">
     <label >
       <input type="checkbox" class="form-check-input">
       <small>Remember Me</small>
     </label>
-    <button (click)="login()" class="btn btn-login float-right">Submit</button>
+    <button (click)="login()" >Submit</button>
   </div>
   <div *ngIf='usernameerror' class="error">
     <span>{{usernameerror}}</span>
